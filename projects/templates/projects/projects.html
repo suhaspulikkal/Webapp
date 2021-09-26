@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <!-- Breadcrumb Area Start -->
+    <section class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url({% static 'images/70.jpg' %});">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcrumb-content text-center">
+                        <h2 class="page-title">Projects</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="{% url 'index' %}"><i class="icon_house_alt"></i> Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Projects</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Area End -->
+ <!-- Our Team Area Start -->
+    <section class="our-team-area section-padding-80-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading text-center wow fadeInUp" data-wow-delay="100ms">
+                        <h2>My Projects</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Team Member Area -->
+
+                <!-- Team Member Area -->
+                <div class="col-md-6 col-xl-3">
+                    <div class="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="member-thumb">
+                            <img src="{% static 'images/mail.png' %}" alt="">
+                        </div>
+                        <h5>Resume Maker App</h5>
+                        <span>Using Django Framework</span>
+                        <div class="member-social-info">
+                            <a href="#"><i class="ti-facebook"></i></a>
+                            <a href="#"><i class="ti-twitter-alt"></i></a>
+                            <a href="#"><i class="ti-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Team Member Area -->
+               <div class="col-md-6 col-xl-3">
+                    <div class="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="member-thumb">
+                            <img src="{% static 'images/email.jpg' %}" alt="">
+                        </div>
+                        <h5>E-Mail <br> App</h5>
+                        <span>Using Django Framework</span>
+                        <div class="member-social-info">
+                            <a href="#"><i class="ti-facebook"></i></a>
+                            <a href="#"><i class="ti-twitter-alt"></i></a>
+                            <a href="#"><i class="ti-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Team Member Area -->
+
+                  <!-- Team Member Area -->
+                <div class="col-md-6 col-xl-3">
+                    <div class="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="member-thumb">
+                            <img src="{% static 'images/register.png' %}" alt="">
+                        </div>
+                        <h5>Registration <br>App</h5>
+                        <span>Using Django Framework</span>
+                        <div class="member-social-info">
+                            <a href="#"><i class="ti-facebook"></i></a>
+                            <a href="#"><i class="ti-twitter-alt"></i></a>
+                            <a href="#"><i class="ti-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Team Member Area -->
+                <div class="col-md-6 col-xl-3">
+                    <div class="team-content-area text-center mb-30 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="member-thumb">
+                            <img src="{% static 'images/dynamic.jpg' %}" alt="">
+                        </div>
+                        <h5>Dynamic <br>App</h5>
+                        <span>Using Django Framework</span>
+                        <div class="member-social-info">
+                            <a href="#"><i class="ti-facebook"></i></a>
+                            <a href="#"><i class="ti-twitter-alt"></i></a>
+                            <a href="#"><i class="ti-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+{% endblock %}

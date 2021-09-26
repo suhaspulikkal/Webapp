@@ -1,0 +1,388 @@
+{% extends 'base.html' %}
+{% load static %}
+
+ {% block content %}
+<!-- Welcome Area Start -->
+    <section class="welcome-area">
+        <div class="welcome-slides owl-carousel">
+            <!-- Single Slide -->
+            <div class="single-welcome-slide bg-img bg-overlay" style="background-image: url(static/register/img/bg-img/5.jpg);">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <!-- Welcome Text -->
+                        <div class="col-12 col-lg-8 col-xl-6">
+                            <div class="welcome-text">
+                                {% if user.is_authenticated %}
+                                <h2 data-animation="bounceInDown" data-delay="900ms">Hello {{user.first_name}} Welcome to Dream Codev Technology</h2>
+                                <p data-animation="bounceInDown" data-delay="500ms">We Are Very Exited to Help You Today </br> We Do Digital Marketing in a Unique Way.</br>
+                                    Take Your Business To the Next Level.<br>Stay Home Stay Safe and Make Business Digitally.</p></p>
+
+                                <div class="hero-btn-group" data-animation="bounceInDown" data-delay="100ms">
+                                    <a href="contact.html" class="btn alime-btn mb-3 mb-sm-0 mr-4">Contact Us</a>
+                                    <a class="hero-mail-contact" href="{% static 'mailto:pulikkalsuhas@gmail.com' %}">pulikkalsuhas@gmail.com</a>
+                                </div>
+                                {% else %}
+                                <h2 data-animation="bounceInDown" data-delay="900ms">Hello I'm<br>Suhas Pulikkal</h2>
+                                <p data-animation="bounceInDown" data-delay="500ms">I Do Develop Creative Digitalized Resume Based <br>Portfolio Web Application.<br>
+                                Stay Home Stay Safe and Share Your Resume Digitaly.</p>
+                                <div class="hero-btn-group" data-animation="bounceInDown" data-delay="100ms">
+                                    <a href="contact.html" class="btn alime-btn mb-3 mb-sm-0 mr-4">Contact Us</a>
+                                    <a class="hero-mail-contact" href="{% static 'mailto:pulikkalsuhas@gmail.com' %}">pulikkalsuhas@gmail.com</a>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Slide -->
+            <div class="single-welcome-slide bg-img bg-overlay" style="background-image: url(static/register/img/bg-img/6.jpg);">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <!-- Welcome Text -->
+                        <div class="col-12 col-lg-8 col-xl-6">
+                            <div class="welcome-text">
+                                {% if user.is_authenticated %}
+                                <h2 data-animation="bounceInUp" data-delay="100ms"> Hi {{user.first_name}} Welcome to Dream CoDev </h2>
+                                <p data-animation="bounceInUp" data-delay="500ms">We Do Develop Digitalized Resume Based<br>Portfolio Web Application.<br>
+                                Stay Home Stay Safe and Share Your Resume Digitally.</p>
+                                <div class="hero-btn-group" data-animation="bounceInUp" data-delay="900ms">
+                                    <a href="#" class="btn alime-btn mb-3 mb-sm-0 mr-4">Contact Us</a>
+                                    <a class="hero-mail-contact" href="{% static 'mailto:pulikkalsuhas@gmail.com' %}">pulikkalsuhas@gmail.com</a>
+                                </div>
+                                {% else %}
+                                <h2 data-animation="bounceInDown" data-delay="900ms">Hello I'm<br>Suhas Pulikkal</h2>
+                                <p data-animation="bounceInDown" data-delay="500ms">I Do Develop Creative Digitalized Resume Based <br>Portfolio Web Application.<br>
+                                Stay Home Stay Safe and Share Your Resume Digitaly.</p>
+                                <div class="hero-btn-group" data-animation="bounceInDown" data-delay="100ms">
+                                    <a href="contact.html" class="btn alime-btn mb-3 mb-sm-0 mr-4">Contact Us</a>
+                                    <a class="hero-mail-contact" href="{% static 'mailto:pulikkalsuhas@gmail.com' %}">pulikkalsuhas@gmail.com</a>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Welcome Area End -->
+
+    <!-- Gallery Area Start -->
+    <div class="alime-portfolio-area section-padding-80 clearfix">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Projects Menu -->
+                    <div class="alime-projects-menu">
+                        <div class="portfolio-menu text-center">
+                            <button class="btn active" data-filter="*">All</button>
+                            <button class="btn" data-filter=".human">Human</button>
+                            <button class="btn" data-filter=".nature">Nature</button>
+                            <button class="btn" data-filter=".country">Certificates</button>
+                            <button class="btn" data-filter=".work">Work</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row alime-portfolio">
+                <!-- ABOUT Gallery Item -->
+
+                    <div class="col-12 col-sm-6 col-lg-3 single_gallery_item work mb-30 wow fadeInUp" data-wow-delay="100ms">
+                    <div class="single-portfolio-content">
+                    <!-- Breadcrumb Area Start -->
+                    <section class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url({% static 'about/images/73.jpeg' %});">
+                    <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                    <div class="col-12">
+                    <div class="breadcrumb-content text-center">
+                    <h2 class="page-title">About Me</h2>
+                    <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a href="{% url 'aboutin' %}"><i class="icon_house_alt"></i> About</a></li>
+                    </ol>
+                    </nav>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </section>
+                    </div>
+                    </div>
+                <!-- ABOUT Gallery Item  END-->
+
+                <!-- CERTIFICATES Gallery Item -->
+                  <div class="col-12 col-sm-6 col-lg-3 single_gallery_item work mb-30 wow fadeInUp" data-wow-delay="100ms">
+                    <div class="single-portfolio-content">
+                           <!-- Breadcrumb Area Start -->
+    <section class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url({% static 'certificates/images/cover.jpg' %});">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcrumb-content text-center">
+                        <h2 class="page-title">Certificates</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="{% url 'certi' %}"><i class="icon_house_alt"></i> Certificates</a></li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                    </div>
+                </div>
+
+                <!-- CERTIFICATES Gallery Item END-->              <!-- PROJECTS Gallery Item -->
+<div class="col-12 col-sm-6 col-lg-3 single_gallery_item work mb-30 wow fadeInUp" data-wow-delay="100ms">
+                    <div class="single-portfolio-content">
+    <!-- Breadcrumb Area Start -->
+    <section class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url({% static 'projects/images/70.jpg' %});">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcrumb-content text-center">
+                        <h2 class="page-title">Projects</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="{% url 'projectsin' %}"><i class="icon_house_alt"></i> Projects</a></li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                    </div>
+</div>
+
+                <!-- PROJECTS Gallery Item END-->
+
+
+
+
+                <!-- Single Gallery Item -->
+                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item work mb-30 wow fadeInUp" data-wow-delay="300ms">
+                    <div class="single-portfolio-content">
+                        <img src="{% static 'images/79.jpeg' %}" alt="">
+                        <div class="hover-content">
+                            <a href="{% static 'images/79.jpeg' %}" class="portfolio-img">+</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Gallery Item -->
+                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item work mb-30 wow fadeInUp" data-wow-delay="500ms">
+                    <div class="single-portfolio-content">
+                        <img src="{% static 'images/78.jpg' %}" alt="">
+                        <div class="hover-content">
+                            <a href="{% static 'images/78.jpg' %}" class="portfolio-img">+</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Gallery Item -->
+                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item human mb-30 wow fadeInUp" data-wow-delay="700ms">
+                    <div class="single-portfolio-content">
+                        <img src="{% static 'images/6.jpg' %}" alt="">
+                        <div class="hover-content">
+                            <a href="images/6.jpg" class="portfolio-img">+</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Gallery Item -->
+                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item nature mb-30 wow fadeInUp" data-wow-delay="100ms">
+                    <div class="single-portfolio-content">
+                        <img src="{% static 'images/7.jpg'%}" alt="">
+                        <div class="hover-content">
+                            <a href="{% static 'images/7.jpg' %}" class="portfolio-img">+</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Gallery Item -->
+                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item video country mb-30 wow fadeInUp" data-wow-delay="300ms">
+                    <div class="single-portfolio-content">
+                        <img src="{% static 'images/8.jpg' %}" alt="">
+                        <div class="hover-content">
+                            <a href="{% static 'images/8.jpg' %}" class="portfolio-img">+</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Gallery Item -->
+                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item human mb-30 wow fadeInUp" data-wow-delay="500ms">
+                    <div class="single-portfolio-content">
+                        <img src="{% static 'images/10.jpg' %}" alt="">
+                        <div class="hover-content">
+                            <a href="{% static 'images/10.jpg' %}" class="portfolio-img">+</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Gallery Item -->
+                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item nature mb-30 wow fadeInUp" data-wow-delay="700ms">
+                    <div class="single-portfolio-content">
+                        <img src="{% static 'images/9.jpg' %}" alt="">
+                        <div class="hover-content">
+                            <a href="{% static 'images/9.jpg' %}" class="portfolio-img">+</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Gallery Item -->
+                <div class="col-12 col-sm-6 col-lg-6 single_gallery_item video country mb-30 wow fadeInUp" data-wow-delay="100ms">
+                    <div class="single-portfolio-content">
+                        <img src="{% static 'images/36.jpg' %}" alt="">
+                        <div class="hover-content">
+                            <a href="{% static 'images/36.jpg' %}" class="portfolio-img">+</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Gallery Item -->
+                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item human mb-30 wow fadeInUp" data-wow-delay="300ms">
+                    <div class="single-portfolio-content">
+                        <img src="{% static 'images/37.jpg' %}" alt="">
+                        <div class="hover-content">
+                            <a href="{% static 'images/37.jpg' %}" class="portfolio-img">+</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Gallery Item -->
+                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item country mb-30 wow fadeInUp" data-wow-delay="500ms">
+                    <div class="single-portfolio-content">
+                        <img src="{% static 'images/5.jpg' %}" alt="">
+                        <div class="hover-content">
+                            <a href="{% static 'images/5.jpg' %}" class="portfolio-img">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 text-center wow fadeInUp" data-wow-delay="700ms">
+                    <a href="#" class="btn alime-btn btn-2 mt-15">View More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Gallery Area End -->
+
+    <!-- Follow Area Start -->
+    <section class="follow-area clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading text-center">
+                        <h2>Follow Instagram</h2>
+                        <p>@Programmer_Pulikkal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instagram Feed Area -->
+        <div class="instragram-feed-area owl-carousel">
+            <!-- Single Instagram Item -->
+            <div class="single-instagram-item">
+                <img src="{% static 'images/75.jpg' %}" alt="">
+                <div class="instagram-hover-content text-center d-flex align-items-center justify-content-center">
+                    <a href="#">
+                        <i class="ti-instagram" aria-hidden="true"></i>
+                        <span>@Programmer_Pulikkal</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Single Instagram Item -->
+            <div class="single-instagram-item">
+                <img src="{% static 'images/74.jpg' %}" alt="">
+                <div class="instagram-hover-content text-center d-flex align-items-center justify-content-center">
+                    <a href="#">
+                        <i class="ti-instagram" aria-hidden="true"></i>
+                        <span>@Programmer_Pulikkal</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Single Instagram Item -->
+            <div class="single-instagram-item">
+                <img src="{% static 'images/76.jpg' %}" alt="">
+                <div class="instagram-hover-content text-center d-flex align-items-center justify-content-center">
+                    <a href="#">
+                        <i class="ti-instagram" aria-hidden="true"></i>
+                        <span>@Programmer_Pulikkal</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Single Instagram Item -->
+            <div class="single-instagram-item">
+                <img src="{% static 'images/77.jpeg' %}" alt="">
+                <div class="instagram-hover-content text-center d-flex align-items-center justify-content-center">
+                    <a href="#">
+                        <i class="ti-instagram" aria-hidden="true"></i>
+                        <span>@Programmer_Pulikkal</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Single Instagram Item -->
+            <div class="single-instagram-item">
+                <img src="{% static 'images/78.jpg' %}" alt="">
+                <div class="instagram-hover-content text-center d-flex align-items-center justify-content-center">
+                    <a href="#">
+                        <i class="ti-instagram" aria-hidden="true"></i>
+                        <span>@Programmer_Pulikkal</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Single Instagram Item -->
+            <div class="single-instagram-item">
+                <img src="{% static 'images/79.jpeg' %}" alt="">
+                <div class="instagram-hover-content text-center d-flex align-items-center justify-content-center">
+                    <a href="#">
+                        <i class="ti-instagram" aria-hidden="true"></i>
+                        <span>@Programmer_Pulikkal</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Follow Area End -->
+
+    <!-- Footer Area Start -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-content d-flex align-items-center justify-content-between">
+                        <!-- Copywrite Text -->
+                        <div class="copywrite-text">
+                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                             &copy;<script>document.write(new Date().getFullYear());</script> In reference with <i class="fa fa-heart-o" aria-hidden="true"></i><a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                        </div>
+                        <!-- Footer Logo -->
+                        <div class="footer-logo">
+                            <a href="#"><img src="{% static 'images/logo2.png' %}" alt=""></a>
+                        </div>
+                        <!-- Social Info -->
+                        <div class="social-info">
+                            <a href="{% static 'http://www.facebook.com/suhaspulikkal' %}"><i class="ti-facebook" aria-hidden="true"></i></a>
+                            <a href="#"><i class="ti-twitter-alt" aria-hidden="true"></i></a>
+                            <a href="#"><i class="ti-linkedin" aria-hidden="true"></i></a>
+                            <a href="#"><i class="ti-pinterest" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+  {% endblock content %}

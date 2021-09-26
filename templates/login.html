@@ -1,0 +1,187 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pulikkal-WebApplication</title>
+    <link rel="stylesheet" href="{% static 'login/css/components.css' %}">
+    <link rel="stylesheet" href="{% static 'login/css/icons.css' %}">
+    <link rel="stylesheet" href="{% static 'login/css/responsee.css' %}">
+    <link rel="stylesheet" href="{% static 'login/owl-carousel/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'login/owl-carousel/owl.theme.css' %}">
+    <!-- CUSTOM STYLE -->
+    <link rel="stylesheet" href="{% static 'login/css/template-style.css' %}">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="{% static 'login/js/jquery-1.8.3.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'login/js/jquery-ui.min.js' %}"></script>
+
+
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="icon" href="{%static './img/core-img/favicon.png' %}">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{%static 'register/style.css' %}">
+
+  </head>
+
+  <body class="size-1140">
+
+  	<!-- PREMIUM FEATURES BUTTON -->
+  	<a target="_blank" class="hide-s" href="../template/prospera-premium-responsive-business-template/" style="position:fixed;top:120px;right:-14px;z-index:10;"><img src="{% static 'img/1.pn' %}" alt=""></a>
+    <!-- HEADER -->
+    <header role="banner">
+      <!-- Top Bar -->
+      <div class="top-bar hide-s hide-m background-white">
+        <div class="line">
+          <div class="s-12 m-6 l-6">
+            <div class="top-bar-contact">
+              <p class="text-size-12"> Grab Your Digitalized Resume | We Develop Creative One For You :) <a class="text-orange-hover" href="mailto:pulikkalsuhas@gmail.com"></a></p>
+            </div>
+          </div>
+          <div class="s-12 m-6 l-6">
+            <div class="right">
+              <ul class="top-bar-social right">
+                <li><a href="http://www.facebook.com/suhaspulikkal"><i class="icon-facebook_circle text-orange-hover"></i></a></li>
+                <li><a href="/"><i class="icon-twitter_circle text-orange-hover"></i></a> </li>
+                <li><a href="/"><i class="icon-google_plus_circle text-orange-hover"></i></a></li>
+                <li><a href="/"><i class="icon-instagram_circle text-orange-hover"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Top Navigation -->
+      <nav class="background-white background-primary-hightlight">
+        <div class="line">
+          <div class="s-12 l-2">
+            <a href="index.html" class="logo"><img src="{% static 'img/header.jpg' %}" alt=""></a>
+          </div>
+          <div class="top-nav s-12 l-10">
+
+            <ul class="right chevron">
+              <li><a href="{% url 'home' %}">Home</a>
+                <ul>
+                  <li><a href="{% url 'register' %}">Register</a>
+                  <li><a href="{% url 'login' %}">Login</a>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main role="main">
+      <!-- Content -->
+      <article>
+        <header class="section background-primary text-center">
+          <h1 class="text-white margin-bottom-0 text-size-50 text-thin text-line-height-1"><b>CHOOSE</b> YOUR<b> VIEW</b> <u>And WE</u> <b>DEVELOP</b> YOUR <b>DREAM</b></h1>
+        </header>
+        <div class="section background-white">
+          <div class="line">
+            <div class="margin">
+
+              <!-- Company Information -->
+              <div class="s-12 m-12 l-6">
+                <h2 class="text-uppercase text-strong margin-bottom-30">Company Information</h2>
+                <div class="float-left">
+                  <i class="icon-placepin background-primary icon-circle-small text-size-20"></i>
+                </div>
+                <div class="margin-left-80 margin-bottom">
+                  <h4 class="text-strong margin-bottom-0">Company Address</h4>
+                  <p>Dream Code Developers<br>
+                     Bangalore 560-040<br>
+                     India, Asia
+                  </p>
+                </div>
+                <div class="float-left">
+                  <i class="icon-paperplane_ico background-primary icon-circle-small text-size-20"></i>
+                </div>
+                <div class="margin-left-80 margin-bottom">
+                  <h4 class="text-strong margin-bottom-0">E-mail</h4>
+                  <p>Resumemaker@gmail.com<br>
+                     dreamcodev@gmail.com
+                  </p>
+                </div>
+                <div class="float-left">
+                  <i class="icon-smartphone background-primary icon-circle-small text-size-20"></i>
+                </div>
+                <div class="margin-left-80">
+                  <h4 class="text-strong margin-bottom-0">Phone Numbers</h4>
+                  <p>+91 8050382198<br>
+                     +91 7676738254<br>
+                     +91 7022926213
+                  </p>
+                </div>
+              </div>
+
+              <!-- Contact Form -->
+              <div class="s-12 m-12 l-6">
+                <h2 class="text-uppercase text-strong margin-bottom-30"><u>LOGIN</u></h2>
+                {% for message in messages %}
+                  <div class="alert alert-danger">
+                    <h3></h3><strong>ERROR!</strong> {{message}}</h3>
+                  </div>
+                {% endfor %}
+                <br>
+                <form class="customform" method="post">
+                  {% csrf_token %}
+                  <div class="s-12">
+                    <input name="username" class="subject border-radius" placeholder="username" type="text" />
+                  </div>
+                  <div class="s-12">
+                    <input name="password1" class="subject border-radius" placeholder="password" type="password" />
+                  </div>
+                  <div class="s-12 m-12 l-4"><button class="submit-form button background-primary border-radius text-white" type="submit">LOGIN</button></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="background-primary padding text-center">
+        <a href="http://www.facebook.com/suhaspulikkal"><i class="icon-facebook_circle icon2x text-white"></i></a>
+        <a href="/"><i class="icon-twitter_circle icon2x text-white"></i></a>
+        <a href="/"><i class="icon-google_plus_circle icon2x text-white"></i></a>
+        <a href="/"><i class="icon-instagram_circle icon2x text-white"></i></a>
+      </div>
+      <!-- MAP -->
+
+
+      <!-- Bottom Footer -->
+      <section class="padding background-dark">
+        <div class="line">
+          <div class="s-12 l-6">
+            <p class="text-size-12">Copyright 2019, Vision Design - graphic zoo</p>
+            <p class="text-size-12">All images have been purchased from Bigstock. Do not use the images in your website.</p>
+          </div>
+          <div class="s-12 l-6">
+            <a class="right text-size-12" href="http://www.myresponsee.com" title="Responsee - lightweight responsive framework">Design and coding<br> by Responsee Team</a>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script type="text/javascript" src="{% static 'login/js/responsee.js' %}"></script>
+    <script type="text/javascript" src="{% static 'login/owl-carousel/owl.carousel.js' %}"></script>
+    <script type="text/javascript" src="{% static 'login/js/template-scripts.js' %}"></script>
+          <!-- Header Area End -->
+    <script src="{%static 'login/js/jquery.min.js' %}"></script>
+    <!-- Popper -->
+    <script src="{%static 'login/js/popper.min.js' %}"></script>
+    <!-- Bootstrap -->
+    <script src="{%static 'login/js/bootstrap.min.js' %}"></script>
+    <!-- All Plugins -->
+    <script src="{%static 'login/js/alime.bundle.js' %}"></script>
+    <!-- Active -->
+    <script src="{%static 'login/js/default-assets/active.js' %}"></script>
+
+   </body>
+</html>
