@@ -1,0 +1,143 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>Pulikkal-WebApplication</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{%static './img/core-img/favicon.png' %}">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{% static 'register/style.css' %}">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+
+        <div class="loader"></div>
+    </div>
+    <!-- /Preloader -->
+
+    <!-- Top Search Form Area -->
+    <div class="top-search-area">
+        <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <!-- Close -->
+                        <button type="button" class="btn close-btn" data-dismiss="modal"><i class="ti-close"></i></button>
+                        <!-- Form -->
+                        <form action="index.html" method="post">
+                            <input type="search" name="top-search-bar" class="form-control" placeholder="Search and hit enter...">
+                            <button type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Area Start -->
+    <header class="header-area">
+        <!-- Main Header Start -->
+        <div class="main-header-area">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Classy Menu -->
+                    <nav class="classy-navbar justify-content-between" id="alimeNav">
+
+                        <!-- Logo -->
+                        <a class="nav-brand" href="{%static './index.html' %}"><img src=" " alt=""></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+                            <!-- Menu Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul id="nav">
+                                    <li><a href="{% url 'index' %}">Home</a>
+                                        <ul class="dropdown">
+                                            <li><a href="{% url 'certi' %}">- Certificates</a></li>
+                                            <li><a href="{% url 'projectsin' %}">- Projects</a></li>
+                                            <li><a href="{% url 'aboutin' %}">- About</a></li>
+                                            <li><a href="{% url 'contact' %}">- Contact</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="{% url 'certi' %}">Certificates</a></li>
+                                    <li><a href="{% url 'projectsin' %}">Projects</a></li>
+                                    <li><a href="{% url 'aboutin' %}">About</a></li>
+                                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                                    <li><a href="{% url 'datas' %}">Click here to view Database</a></li>
+
+
+                                </ul>
+
+                                <!-- Search Icon -->
+                                <div class="search-icon" data-toggle="modal" data-target="#searchModal"><i class="ti-search"></i></div>     
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    {% block content %}
+</hr>
+</br>
+</br>
+</br>
+</br>
+</br>
+<table border="2">
+    <tr>
+<th>FIRST NAME</th>
+<th>USERNAME</th>
+</tr>
+<tr>
+        {% for i in users %}
+<td>{{i.first_name}}</td>
+<td>{{i.username}}</td>
+</tr>
+        {% endfor %}
+
+
+
+   
+</table>
+
+       {% endblock %}
+
+
+    <!-- Header Area End -->
+    <script src="{%static 'register/js/jquery.min.js' %}"></script>
+    <!-- Popper -->
+    <script src="{%static 'register/js/popper.min.js' %}"></script>
+    <!-- Bootstrap -->
+    <script src="{%static 'register/js/bootstrap.min.js' %}"></script>
+    <!-- All Plugins -->
+    <script src="{%static 'register/js/alime.bundle.js' %}"></script>
+    <!-- Active -->
+    <script src="{%static 'register/js/default-assets/active.js' %}"></script>
+
+</body>
+</html>
